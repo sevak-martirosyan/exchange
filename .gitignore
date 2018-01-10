@@ -1,7 +1,7 @@
 *.iml
-exchange.log
 target/
 .idea/
-exchange.properties
-exchange.script
+.properties
+.script
+.log
 
