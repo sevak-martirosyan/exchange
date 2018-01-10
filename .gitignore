@@ -1,7 +1,7 @@
-.idea
 *.iml
-.log
+*.log
 target/
-.properties
-.script
+.idea/
+*.properties
+*.script
 
