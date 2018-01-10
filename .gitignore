@@ -1,7 +1,5 @@
 *.iml
 target/
 .idea/
-.properties
-.script
 .log
 
