@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import service.JpyService;
+import service.CurrencyService;
 
 
 @SpringBootApplication
@@ -19,7 +19,7 @@ import service.JpyService;
 public class Application {
     public static void main(String[] args) throws Exception {
         ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
-        context.getBean(JpyService.class).fillRepositoryEveryHour();
+        context.getBean(CurrencyService.class).fillRepositoryEveryHour();
 
     }
 }

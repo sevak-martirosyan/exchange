@@ -4,14 +4,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-@Table(name = "jpymodel")
-public class JPYModel implements Serializable {
+@Table(name = "currencymodel")
+public class CurrencyModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -36,14 +34,14 @@ public class JPYModel implements Serializable {
 
     private Date timeReceipt;
 
-    public JPYModel() {
+    public CurrencyModel() {
         this.numCode = 392;
         this.name = "йена";
         this.charCode = "JPY";
         this.timeReceipt = new Date();
     }
 
-    public JPYModel(Integer nominal, Double value) {
+    public CurrencyModel(Integer nominal, Double value) {
         this();
         this.nominal = nominal;
         this.value = value;
@@ -108,7 +106,7 @@ public class JPYModel implements Serializable {
 
     @Override
     public String toString() {
-        return "JPYModel{" +
+        return "CurrencyModel{" +
                 "id=" + id +
                 ", numCode=" + numCode +
                 ", charCode='" + charCode + '\'' +
